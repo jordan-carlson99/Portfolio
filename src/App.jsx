@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 import "../src/styleSheet.css";
 
 // linked in : https://www.linkedin.com/in/jordan-carlson99/
@@ -25,14 +26,24 @@ function Header() {
 }
 
 function BioText({ text }) {
+  // const [type, setType] = useState("bio-text");
+  // const typing = () => {
+  //   setType("bio-text typing");
+  // };
+  let delay = -1.5;
   let textArr = text.split("\n");
   const paragraphs = textArr.map((element, index) => {
+    delay += 2;
     if (element.length < 1) {
       return null;
     } else {
       element = "> " + element;
       return (
-        <p key={index} className="bio-text">
+        <p
+          key={index}
+          className="bio-text typing"
+          style={{ animationDelay: delay + "s" }}
+        >
           {element}
         </p>
       );
@@ -50,7 +61,7 @@ function ProjectModal({ link }) {
   const [hidden, setHidden] = useState("pop-ups hidden");
   const showIcons = () => {
     if (hidden == "pop-ups hidden") {
-      setHidden("pop-ups");
+      setHidden("pop-ups move");
     } else {
       setHidden("pop-ups hidden");
     }
@@ -70,7 +81,7 @@ function ProjectModal({ link }) {
         <img className="icon" src="../icons/github.png"></img>
       </a>
       <button id="project-modal" onClick={showIcons}>
-        Projects
+        Contact Me
       </button>
     </div>
   );

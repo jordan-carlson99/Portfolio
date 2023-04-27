@@ -4,11 +4,11 @@ body {
 }
 @font-face {
   font-family: "droid-sans";
-  src: url("../font/DroidSans.ttf");
+  src: url("../style/font/DroidSans.ttf");
 }
 @font-face {
   font-family: "droid-sans-bold";
-  src: url("../font/DroidSans-Bold.ttf");
+  src: url("../style/font/DroidSans-Bold.ttf");
 }
 * {
   font-family: "droid-sans";
@@ -62,7 +62,7 @@ header {
 
 /* contact buttons  */
 
-/* ------------ bio box ------------ */
+/* ------------ bio box / terminal------------ */
 #bio-box {
   display: flex;
   justify-content: center;
@@ -76,11 +76,33 @@ header {
   height: 80%;
   width: 70%;
   border-radius: 20px;
+  overflow-y: hidden;
+}
+
+.typing {
+  width: 0;
+  height: 0;
+  overflow-y: hidden;
+  white-space: pre-wrap;
+  animation: type-out 2s linear forwards;
 }
 
 .bio-text {
   margin: 4%;
+  overflow: hidden;
+  word-break: keep-all;
   color: #ffff;
+}
+
+@keyframes type-out {
+  from {
+    width: 0;
+    height: 20px;
+  }
+  to {
+    width: 80%;
+    height: 20px;
+  }
 }
 
 /* ------------ projects modal ------------ */
@@ -93,13 +115,12 @@ header {
   justify-content: space-around;
   left: 68%;
   top: 73%;
-  /* border: 1px solid red; */
   height: 200px;
   width: 300px;
 }
 
 #project-modal {
-  z-index: 3;
+  /* z-index: 3; */
   height: 75px;
   width: 150px;
   position: absolute;
@@ -114,21 +135,45 @@ header {
 .pop-ups {
   height: 30px;
   width: 30px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+@keyframes moveResume {
+  to {
+    transform: translate(-900%, -10%);
+  }
+}
+@keyframes moveContact {
+  to {
+    transform: translate(-780%, -300%);
+  }
 }
 
-#pop-up-resume {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+@keyframes moveLinkedIn {
+  to {
+    transform: translate(-400%, -590%);
+  }
 }
-#pop-up-contact {
-  transform: translate(90%, 250%) rotate(0deg);
+@keyframes moveGithub {
+  to {
+    transform: translate(-0%, -680%);
+  }
 }
-#pop-up-linkedin {
-  transform: translate(80%, 10%) rotate(0deg);
+
+#pop-up-resume.move {
+  animation: moveResume 2s forwards;
 }
-#pop-up-github {
-  transform: translate(100%, -30%) rotate(0deg);
+#pop-up-contact.move {
+  animation: moveContact 2s forwards;
+}
+
+#pop-up-linkedin.move {
+  animation: moveLinkedIn 2s forwards;
+}
+
+#pop-up-github.move {
+  animation: moveGithub 2s forwards;
 }
 
 .icon {
@@ -140,4 +185,8 @@ header {
 
 .hidden {
   display: none;
+}
+
+.contact-icons {
+  animation: pop-out 3s linear forwards;
 }
