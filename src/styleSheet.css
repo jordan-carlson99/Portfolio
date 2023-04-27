@@ -68,6 +68,9 @@ header {
   overflow: auto;
 }
 .contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #404040;
   color: #93b0c0;
   border: 0;
@@ -99,16 +102,59 @@ header {
 
 /* ------------ projects modal ------------ */
 
-#project-modal {
+#modal-around {
   z-index: 2;
+  display: flex;
   position: fixed;
-  left: 83%;
-  top: 86%;
+  align-items: flex-start;
+  justify-content: space-around;
+  left: 68%;
+  top: 73%;
+  /* border: 1px solid red; */
+  height: 200px;
+  width: 300px;
+}
+
+#project-modal {
+  z-index: 3;
   height: 75px;
   width: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   border-radius: 20px;
   background-color: #2e5b74;
   border: 0;
   color: #ffff;
   font-size: 20px;
+}
+.pop-ups {
+  height: 30px;
+  width: 30px;
+}
+
+#pop-up-resume {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#pop-up-contact {
+  transform: translate(90%, 250%) rotate(0deg);
+}
+#pop-up-linkedin {
+  transform: translate(80%, 10%) rotate(0deg);
+}
+#pop-up-github {
+  transform: translate(100%, -30%) rotate(0deg);
+}
+
+.icon {
+  height: auto;
+  width: auto;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,8 +1,17 @@
 import { useState } from "react";
 import "../src/styleSheet.css";
 
-function ContactButtons({ title }) {
-  return <button className="contact-button">{title}</button>;
+// linked in : https://www.linkedin.com/in/jordan-carlson99/
+
+// github: https://github.com/jordan-carlson99
+
+function ContactButtons({ title, link }) {
+  // console.log(link);
+  return (
+    <a className="contact-button" href={link} target="_blank">
+      {title}
+    </a>
+  );
 }
 
 function Header() {
@@ -23,8 +32,14 @@ function Header() {
       <div id="button-container">
         <ContactButtons title="Resume"></ContactButtons>
         <ContactButtons title="Contact"></ContactButtons>
-        <ContactButtons title="LinkedIn"></ContactButtons>
-        <ContactButtons title="Github"></ContactButtons>
+        <ContactButtons
+          title="LinkedIn"
+          link="https://www.linkedin.com/in/jordan-carlson99/"
+        ></ContactButtons>
+        <ContactButtons
+          title="Github"
+          link="https://github.com/jordan-carlson99"
+        ></ContactButtons>
       </div>
     </header>
   );
@@ -52,26 +67,57 @@ function BioText({ text }) {
   );
 }
 
-function ProjectModal() {
-  return <button id="project-modal">Projects</button>;
+function ProjectModal({ link }) {
+  const [hidden, setHidden] = useState("pop-ups hidden");
+  const showIcons = () => {
+    if (hidden == "pop-ups hidden") {
+      setHidden("pop-ups");
+    } else {
+      setHidden("pop-ups hidden");
+    }
+  };
+  return (
+    <div id="modal-around" className="hidden">
+      <a className={hidden} id="pop-up-resume" href={link[0]} target="_blank">
+        <img className="icon" src="../icons/resume.png"></img>
+      </a>
+      <a className={hidden} id="pop-up-contact" href={link[1]} target="_blank">
+        <img className="icon" src="../icons/email.png"></img>
+      </a>
+      <a className={hidden} id="pop-up-linkedin" href={link[2]} target="_blank">
+        <img className="icon" src="../icons/linkedin.png"></img>
+      </a>
+      <a className={hidden} id="pop-up-github" href={link[3]} target="_blank">
+        <img className="icon" src="../icons/github.png"></img>
+      </a>
+      <button id="project-modal" onClick={showIcons}>
+        Projects
+      </button>
+    </div>
+  );
 }
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  let bio = ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Pellentesque pretium, nisi id commodo pellentesque, massa urna venenatis leo, in venenatis mi libero eu eros. 
+  Integer eget massa eu augue pretium ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+  Fusce aliquam commodo purus, sed pulvinar nibh cursus sed. Vestibulum quis leo quam. Phasellus placerat tellus quam, vitae ultricies est volutpat et. 
+  Aenean velit nisi, pharetra in diam ac, finibus faucibus nisl. In dapibus leo nec porttitor maximus. Nunc id lacinia libero. 
+  Cras bibendum eu libero a hendrerit. Morbi malesuada nisl quis dapibus vestibulum. Nam semper mollis lectus, sed tincidunt lorem pretium non. Etiam at scelerisque risus. Donec facilisis sapien et ornare pellentesque. 
+  Sed at aliquam dui, quis pretium massa. Donec fermentum, dui id bibendum imperdiet, sem est dignissim dui, ac suscipit justo diam non mauris.`;
   return (
     <>
       <Header></Header>
-      <BioText
-        text={` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Pellentesque pretium, nisi id commodo pellentesque, massa urna venenatis leo, in venenatis mi libero eu eros. 
-Integer eget massa eu augue pretium ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-Fusce aliquam commodo purus, sed pulvinar nibh cursus sed. Vestibulum quis leo quam. Phasellus placerat tellus quam, vitae ultricies est volutpat et. 
-Aenean velit nisi, pharetra in diam ac, finibus faucibus nisl. In dapibus leo nec porttitor maximus. Nunc id lacinia libero. 
-Cras bibendum eu libero a hendrerit. Morbi malesuada nisl quis dapibus vestibulum. Nam semper mollis lectus, sed tincidunt lorem pretium non. Etiam at scelerisque risus. Donec facilisis sapien et ornare pellentesque. 
-Sed at aliquam dui, quis pretium massa. Donec fermentum, dui id bibendum imperdiet, sem est dignissim dui, ac suscipit justo diam non mauris.`}
-      ></BioText>
-      <ProjectModal></ProjectModal>
+      <div id="aligner"></div>
+      <BioText text={bio}></BioText>
+      <ProjectModal
+        link={[
+          "none",
+          "none",
+          "https://www.linkedin.com/in/jordan-carlson99/",
+          "https://github.com/jordan-carlson99",
+        ]}
+      ></ProjectModal>
     </>
   );
 }
