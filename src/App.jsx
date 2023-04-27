@@ -5,15 +5,6 @@ import "../src/styleSheet.css";
 
 // github: https://github.com/jordan-carlson99
 
-function ContactButtons({ title, link }) {
-  // console.log(link);
-  return (
-    <a className="contact-button" href={link} target="_blank">
-      {title}
-    </a>
-  );
-}
-
 function Header() {
   return (
     <header id="header">
@@ -28,18 +19,6 @@ function Header() {
             APIs | MVCs
           </p>
         </div>
-      </div>
-      <div id="button-container">
-        <ContactButtons title="Resume"></ContactButtons>
-        <ContactButtons title="Contact"></ContactButtons>
-        <ContactButtons
-          title="LinkedIn"
-          link="https://www.linkedin.com/in/jordan-carlson99/"
-        ></ContactButtons>
-        <ContactButtons
-          title="Github"
-          link="https://github.com/jordan-carlson99"
-        ></ContactButtons>
       </div>
     </header>
   );
