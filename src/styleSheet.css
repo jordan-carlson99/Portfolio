@@ -2,6 +2,31 @@ body {
   background-color: #2d2d2d;
   margin: 0%;
 }
+@font-face {
+  font-family: "droid-sans";
+  src: url("../font/DroidSans.ttf");
+}
+@font-face {
+  font-family: "droid-sans-bold";
+  src: url("../font/DroidSans-Bold.ttf");
+}
+* {
+  font-family: "droid-sans";
+}
+/* ------------ header ------------*/
+
+header {
+  height: 20vh;
+  width: 100vw;
+  padding: 0% 1% 0% 1%;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 5px solid #93b0c0;
+}
+
+/*  name + skills */
 #info {
   display: flex;
   flex-direction: column;
@@ -10,12 +35,12 @@ body {
   width: 50vw;
   color: #ffff;
   font-size: 100%;
-  /* align-items: center; */
   justify-content: center;
   padding-left: 1%;
   overflow: auto;
 }
 #name {
+  font-family: "droid-sans-bold";
   font-size: 2em;
   margin-bottom: 1%;
 }
@@ -31,6 +56,9 @@ body {
   margin-top: 0%;
   min-height: 20px;
 }
+
+/* contact buttons  */
+
 #button-container {
   height: 100%;
   width: 50vw;
@@ -39,22 +67,48 @@ body {
   align-items: center;
   overflow: auto;
 }
-header {
-  height: 20vh;
-  width: 100vw;
-  padding: 1% 1% 0% 1%;
-  margin: 0%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 5px solid #93b0c0;
-}
 .contact-button {
   background-color: #404040;
   color: #93b0c0;
   border: 0;
-  flex: 2 2 auto;
-  max-width: 12%;
-  padding-top: 10%;
+  height: 100px;
+  width: 100px;
   border-radius: 20%;
+}
+
+/* ------------ bio box ------------ */
+#bio-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+#terminal-text {
+  background-color: #404040;
+  height: 80%;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.bio-text {
+  margin: 4%;
+  color: #ffff;
+}
+
+/* ------------ projects modal ------------ */
+
+#project-modal {
+  z-index: 2;
+  position: fixed;
+  left: 83%;
+  top: 86%;
+  height: 75px;
+  width: 150px;
+  border-radius: 20px;
+  background-color: #2e5b74;
+  border: 0;
+  color: #ffff;
+  font-size: 20px;
 }
