@@ -16,6 +16,7 @@ body {
 /* ------------ header ------------*/
 
 header {
+  overflow-x: hidden;
   height: 20vh;
   width: 100vw;
   padding: 0% 1% 0% 1%;
@@ -24,7 +25,21 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-bottom: 5px solid #93b0c0;
+}
+
+#loading-bar {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 0vw;
+  background-color: #93b0c0;
+  height: 5px;
+  transition: width 14.5s;
+  transition-timing-function: linear;
+}
+
+#loading-bar.loading {
+  width: 105vw;
 }
 
 /*  name + skills */
@@ -34,7 +49,7 @@ header {
   align-items: center;
   text-align: center;
   height: 100%;
-  width: 50vw;
+  width: 75vw;
   color: #ffff;
   font-size: 100%;
   justify-content: center;
@@ -60,18 +75,10 @@ header {
   min-height: 20px;
 }
 
-@keyframes loadBar {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100vw;
-  }
-}
-
 /* contact buttons  */
 
 /* ------------ bio box / terminal------------ */
+
 #bio-box {
   display: flex;
   justify-content: center;
@@ -81,11 +88,20 @@ header {
 }
 
 #terminal-text {
+  display: list-item;
+  z-index: 2;
+  /* flex-direction: column; */
   background-color: #404040;
-  height: 80%;
-  width: 70%;
+  height: 90%;
+  width: 85%;
   border-radius: 20px;
-  overflow-y: hidden;
+  overflow-y: scroll;
+}
+
+@media screen and (min-height: 700px) {
+  #terminal-text {
+    height: 80%;
+  }
 }
 
 .typing {
@@ -109,27 +125,26 @@ header {
     height: 20px;
   }
   to {
-    width: 80%;
-    height: 20px;
+    width: 90%;
+    height: auto;
   }
 }
 
 /* ------------ projects modal ------------ */
 
 #modal-around {
-  z-index: 1;
+  z-index: 3;
   display: flex hidden;
   position: fixed;
   align-items: flex-start;
   justify-content: space-around;
-  left: 68%;
-  top: 73%;
+  bottom: 5vh;
+  right: 5vw;
   height: 200px;
   width: 300px;
 }
 
 #project-modal {
-  /* z-index: 3; */
   height: 75px;
   width: 150px;
   position: absolute;
@@ -147,22 +162,22 @@ header {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 #pop-up-resume.move {
-  transform: translate(-900%, -10%);
+  transform: translate(-800%, -10%);
 }
 
 #pop-up-contact.move {
-  transform: translate(-780%, -300%);
+  transform: translate(-700%, -390%);
 }
 #pop-up-linkedin.move {
-  transform: translate(-400%, -590%);
+  transform: translate(-400%, -690%);
 }
 
 #pop-up-github.move {
-  transform: translate(-0%, -680%);
+  transform: translate(0%, -780%);
 }
 
 .icon {
@@ -172,6 +187,18 @@ header {
   max-height: 40px;
 }
 
-.contact-icons {
-  animation: pop-out 3s linear forwards;
+#circle {
+  background-color: #2e5b74;
+  width: 0px;
+  height: 0px;
+  border-radius: 300px 20px 20px 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: width 0.5s, height 0.5s;
+}
+
+#circle.move {
+  height: 300px;
+  width: 300px;
 }

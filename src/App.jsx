@@ -7,8 +7,13 @@ import "../src/styleSheet.css";
 // github: https://github.com/jordan-carlson99
 
 function Header() {
+  const [isLoaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  });
   return (
     <header id="header">
+      <div id="loading-bar" className={isLoaded ? "loading" : ""}></div>
       <div id="info">
         <h1 id="name">Jordan Carlson</h1>
         <div id="skills-section">
@@ -58,26 +63,49 @@ function BioText({ text }) {
 }
 
 function ProjectModal({ link }) {
-  const [hidden, setHidden] = useState("pop-ups hidden");
+  const [hidden, setHidden] = useState("hidden");
   const showIcons = () => {
-    if (hidden == "pop-ups hidden") {
-      setHidden("pop-ups move");
+    if (hidden == "hidden") {
+      setHidden("move");
     } else {
-      setHidden("pop-ups hidden");
+      setHidden("hidden");
     }
   };
   return (
     <div id="modal-around">
-      <a className={hidden} id="pop-up-resume" href={link[0]} target="_blank">
+      <div id="circle" className={"circle " + hidden}></div>
+      <div className="blocker" id="blocker-right"></div>
+      <div className="blocker" id="blocker-bottom"></div>
+      <a
+        className={"pop-ups " + hidden}
+        id="pop-up-resume"
+        href={link[0]}
+        target="_blank"
+      >
         <img className="icon" src="../icons/resume.png"></img>
       </a>
-      <a className={hidden} id="pop-up-contact" href={link[1]} target="_blank">
+      <a
+        className={"pop-ups " + hidden}
+        id="pop-up-contact"
+        href={link[1]}
+        target="_blank"
+      >
         <img className="icon" src="../icons/email.png"></img>
       </a>
-      <a className={hidden} id="pop-up-linkedin" href={link[2]} target="_blank">
+      <a
+        className={"pop-ups " + hidden}
+        id="pop-up-linkedin"
+        href={link[2]}
+        target="_blank"
+      >
         <img className="icon" src="../icons/linkedin.png"></img>
       </a>
-      <a className={hidden} id="pop-up-github" href={link[3]} target="_blank">
+      <a
+        className={"pop-ups " + hidden}
+        id="pop-up-github"
+        href={link[3]}
+        target="_blank"
+      >
         <img className="icon" src="../icons/github.png"></img>
       </a>
       <button id="project-modal" onClick={showIcons}>
