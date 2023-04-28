@@ -67,7 +67,7 @@ function ProjectModal({ link }) {
     }
   };
   return (
-    <div id="modal-around" className="hidden">
+    <div id="modal-around">
       <a className={hidden} id="pop-up-resume" href={link[0]} target="_blank">
         <img className="icon" src="../icons/resume.png"></img>
       </a>

@@ -60,6 +60,15 @@ header {
   min-height: 20px;
 }
 
+@keyframes loadBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+
 /* contact buttons  */
 
 /* ------------ bio box / terminal------------ */
@@ -108,8 +117,8 @@ header {
 /* ------------ projects modal ------------ */
 
 #modal-around {
-  z-index: 2;
-  display: flex;
+  z-index: 1;
+  display: flex hidden;
   position: fixed;
   align-items: flex-start;
   justify-content: space-around;
@@ -138,42 +147,22 @@ header {
   position: absolute;
   bottom: 15px;
   right: 15px;
-}
-@keyframes moveResume {
-  to {
-    transform: translate(-900%, -10%);
-  }
-}
-@keyframes moveContact {
-  to {
-    transform: translate(-780%, -300%);
-  }
-}
-
-@keyframes moveLinkedIn {
-  to {
-    transform: translate(-400%, -590%);
-  }
-}
-@keyframes moveGithub {
-  to {
-    transform: translate(-0%, -680%);
-  }
+  transition: transform 1s;
 }
 
 #pop-up-resume.move {
-  animation: moveResume 2s forwards;
-}
-#pop-up-contact.move {
-  animation: moveContact 2s forwards;
+  transform: translate(-900%, -10%);
 }
 
+#pop-up-contact.move {
+  transform: translate(-780%, -300%);
+}
 #pop-up-linkedin.move {
-  animation: moveLinkedIn 2s forwards;
+  transform: translate(-400%, -590%);
 }
 
 #pop-up-github.move {
-  animation: moveGithub 2s forwards;
+  transform: translate(-0%, -680%);
 }
 
 .icon {
@@ -181,10 +170,6 @@ header {
   width: auto;
   max-width: 40px;
   max-height: 40px;
-}
-
-.hidden {
-  display: none;
 }
 
 .contact-icons {
