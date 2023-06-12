@@ -1,52 +1,79 @@
 import { useState } from "react";
+import styles from "./ProjectModal.module.css";
 
 export default function ProjectModal({ link }) {
-  const [hidden, setHidden] = useState("hidden");
+  const [isHidden, setIsHidden] = useState(true);
   const showIcons = () => {
-    if (hidden == "hidden") {
-      setHidden("move");
-    } else {
-      setHidden("hidden");
-    }
+    setIsHidden(!isHidden);
   };
   return (
-    <div id="modal-around">
-      <div id="circle" className={"circle " + hidden}></div>
-      <div className="blocker" id="blocker-right"></div>
-      <div className="blocker" id="blocker-bottom"></div>
+    <div id={styles["modal-around"]}>
+      <div
+        id={styles["circle"]}
+        className={
+          isHidden
+            ? `${styles["circle"]} ${styles["hidden"]}`
+            : `${styles["circle"]} ${styles["move"]}`
+        }
+      ></div>
+      <div className={styles["blocker"]} id={styles["blocker-right"]}></div>
+      <div className={styles["blocker"]} id={styles["blocker-bottom"]}></div>
       <a
-        className={"pop-ups " + hidden}
-        id="pop-up-resume"
+        className={
+          isHidden
+            ? `${styles["pop-ups"]} ${styles["hidden"]}`
+            : `${styles["pop-ups"]} ${styles["move"]}`
+        }
+        id={styles["pop-up-resume"]}
         href={link[0]}
         target="_blank"
       >
-        <img className="icon" src="../icons/resume.png"></img>
+        <img
+          className={
+            isHidden
+              ? `${styles["pop-ups"]} ${styles["hidden"]}`
+              : `${styles["pop-ups"]} ${styles["move"]}`
+          }
+          src="../icons/resume.png"
+        ></img>
       </a>
       <a
-        className={"pop-ups " + hidden}
-        id="pop-up-contact"
+        className={
+          isHidden
+            ? `${styles["pop-ups"]} ${styles["hidden"]}`
+            : `${styles["pop-ups"]} ${styles["move"]}`
+        }
+        id={styles["pop-up-contact"]}
         href={link[1]}
         target="_blank"
       >
-        <img className="icon" src="../icons/email.png"></img>
+        <img className={styles["icon"]} src="../icons/email.png"></img>
       </a>
       <a
-        className={"pop-ups " + hidden}
-        id="pop-up-linkedin"
+        className={
+          isHidden
+            ? `${styles["pop-ups"]} ${styles["hidden"]}`
+            : `${styles["pop-ups"]} ${styles["move"]}`
+        }
+        id={styles["pop-up-linkedin"]}
         href={link[2]}
         target="_blank"
       >
-        <img className="icon" src="../icons/linkedin.png"></img>
+        <img className={styles["icon"]} src="../icons/linkedin.png"></img>
       </a>
       <a
-        className={"pop-ups " + hidden}
-        id="pop-up-github"
+        className={
+          isHidden
+            ? `${styles["pop-ups"]} ${styles["hidden"]}`
+            : `${styles["pop-ups"]} ${styles["move"]}`
+        }
+        id={styles["pop-up-github"]}
         href={link[3]}
         target="_blank"
       >
-        <img className="icon" src="../icons/github.png"></img>
+        <img className={styles["icon"]} src="../icons/github.png"></img>
       </a>
-      <button id="project-modal" onClick={showIcons}>
+      <button id={styles["project-modal"]} onClick={showIcons}>
         Contact Me
       </button>
     </div>

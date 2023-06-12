@@ -14,64 +14,12 @@ body {
   font-family: "droid-sans";
 }
 
-/* contact buttons  */
-
-/* ------------ bio box / terminal------------ */
-
-#bio-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width: 100vw;
+.hidden {
+  visibility: none;
 }
-
-#terminal-text {
-  display: list-item;
-  z-index: 2;
-  /* flex-direction: column; */
-  background-color: #404040;
-  height: 90%;
-  width: 85%;
-  border-radius: 20px;
-  overflow-y: scroll;
-}
-
-@media screen and (min-height: 700px) {
-  #terminal-text {
-    height: 80%;
-  }
-}
-
-.typing {
-  width: 0;
-  height: 0;
-  overflow-y: hidden;
-  white-space: pre-wrap;
-  animation: type-out 2s linear forwards;
-}
-
-.bio-text {
-  margin: 4%;
-  overflow: hidden;
-  word-break: keep-all;
-  color: #ffff;
-}
-
-@keyframes type-out {
-  from {
-    width: 0;
-    height: 20px;
-  }
-  to {
-    width: 90%;
-    height: auto;
-  }
-}
-
 /* ------------ projects modal ------------ */
 
-#modal-around {
+/* #modal-around {
   z-index: 3;
   display: flex hidden;
   position: fixed;
@@ -140,4 +88,4 @@ body {
 #circle.move {
   height: 300px;
   width: 300px;
-}
+} */

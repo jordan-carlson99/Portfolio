@@ -1,3 +1,5 @@
+import styles from "./BioText.module.css";
+
 export default function BioText({ text }) {
   // const [type, setType] = useState("bio-text");
   // const typing = () => {
@@ -14,7 +16,7 @@ export default function BioText({ text }) {
       return (
         <p
           key={index}
-          className="bio-text typing"
+          className={`${styles["bio-text"]} ${styles["typing"]}`}
           style={{ animationDelay: delay + "s" }}
         >
           {element}
@@ -24,8 +26,8 @@ export default function BioText({ text }) {
   });
   return (
     // make a way to uterate through the senences with split and add in breaks
-    <div id="bio-box">
-      <div id="terminal-text">{paragraphs}</div>
+    <div id={styles["bio-box"]}>
+      <div id={styles["terminal-text"]}>{paragraphs}</div>
     </div>
   );
 }

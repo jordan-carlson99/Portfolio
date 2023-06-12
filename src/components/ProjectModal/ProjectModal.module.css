@@ -1,0 +1,85 @@
+#modal-around {
+  z-index: 3;
+  display: flex hidden;
+  position: fixed;
+  align-items: flex-start;
+  justify-content: space-around;
+  bottom: 5vh;
+  right: 5vw;
+  height: 200px;
+  width: 300px;
+}
+
+#project-modal {
+  height: 75px;
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 20px;
+  background-color: #2e5b74;
+  border: 0;
+  color: #ffff;
+  font-size: 20px;
+}
+
+.pop-ups {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  transition: transform 0.5s;
+}
+
+#pop-up-resume.move {
+  transform: translate(-760%, 10%);
+}
+
+#pop-up-contact.move {
+  transform: translate(-700%, -390%);
+}
+#pop-up-linkedin.move {
+  transform: translate(-400%, -690%);
+}
+#pop-up-github.move {
+  transform: translate(-50%, -780%);
+}
+
+.icon {
+  height: auto;
+  width: auto;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+#circle {
+  background-color: #2e5b74;
+  width: 0px;
+  height: 0px;
+  border-radius: 300px 20px 20px 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: width 0.5s, height 0.5s;
+}
+
+#circle.move {
+  height: 300px;
+  width: 300px;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
