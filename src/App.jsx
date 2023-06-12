@@ -10,13 +10,13 @@ import ProjectModal from "./components/ProjectModal/ProjectModal";
 // github: https://github.com/jordan-carlson99
 
 function App() {
-  let bio = ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Pellentesque pretium, nisi id commodo pellentesque, massa urna venenatis leo, in venenatis mi libero eu eros. 
-  Integer eget massa eu augue pretium ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-  Fusce aliquam commodo purus, sed pulvinar nibh cursus sed. Vestibulum quis leo quam. Phasellus placerat tellus quam, vitae ultricies est volutpat et. 
-  Aenean velit nisi, pharetra in diam ac, finibus faucibus nisl. In dapibus leo nec porttitor maximus. Nunc id lacinia libero. 
-  Cras bibendum eu libero a hendrerit. Morbi malesuada nisl quis dapibus vestibulum. Nam semper mollis lectus, sed tincidunt lorem pretium non. Etiam at scelerisque risus. Donec facilisis sapien et ornare pellentesque. 
-  Sed at aliquam dui, quis pretium massa. Donec fermentum, dui id bibendum imperdiet, sem est dignissim dui, ac suscipit justo diam non mauris.`;
+  let bio = `cat ./bio.txt
+  hi my name is Jordan
+  im a full stack web developer with experience in React, CSS, HTML, Node, Express, and PSQL to name a few
+  i have experience as a network adminstrator and technical project manager in the military.
+  i am currently a full time student at a coding bootcamp for fullstack web development
+  here's some of my work
+  sudo ./projects.sh`;
   return (
     <>
       <Header></Header>
