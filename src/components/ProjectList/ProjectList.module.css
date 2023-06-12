@@ -1,0 +1,49 @@
+#project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+  margin: 25px;
+}
+
+.project {
+  border: 1px solid white;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+.tech-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+.title-container {
+  padding: 10px;
+}
+
+.project-link {
+  padding-bottom: 5px;
+}
+
+.project-body {
+  display: flex;
+}
+
+.description {
+  margin: 10px;
+}
+
+.image-container {
+  width: 100%;
+}

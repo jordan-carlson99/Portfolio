@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./BioText.module.css";
 import ProjectList from "../ProjectList/ProjectList";
 
-export default function BioText({ text }) {
+export default function BioText({ text, projects }) {
   const [terminalShrink, setTerminalShrink] = useState(false);
   // const [type, setType] = useState("bio-text");
   // const typing = () => {
@@ -10,7 +10,8 @@ export default function BioText({ text }) {
   // };
 
   useEffect(() => {
-    const totalDelay = (1.5 * text.split("\n").length - 0.2) * 1000;
+    // const totalDelay = (1.5 * text.split("\n").length - 0.2) * 1000;
+    const totalDelay = 1;
     console.log(totalDelay);
     setTimeout(() => {
       setTerminalShrink(true);
@@ -69,7 +70,7 @@ export default function BioText({ text }) {
       >
         {paragraphs}
       </div>
-      {terminalShrink && <ProjectList />}
+      {terminalShrink && <ProjectList projects={projects} />}
     </div>
   );
 }

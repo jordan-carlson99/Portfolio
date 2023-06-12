@@ -1,0 +1,15 @@
+.description {
+  color: white;
+}
+
+mark {
+  background-color: #2d2d2d2d;
+  color: white;
+  transition: 0.9s;
+}
+
+mark.highlighted {
+  transition: 0.9s;
+  background-color: #93b0c0;
+  color: black;
+}
