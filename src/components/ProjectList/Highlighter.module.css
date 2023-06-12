@@ -1,5 +1,6 @@
 .description {
   color: white;
+  text-align: justify;
 }
 
 mark {
@@ -9,7 +10,24 @@ mark {
 }
 
 mark.highlighted {
-  transition: 0.9s;
+  transition: 2.2s;
   background-color: #93b0c0;
   color: black;
+}
+
+.main-body {
+  margin: 20px;
+  text-align: center;
+}
+
+.image-container {
+  float: left;
+  margin: 15px;
+}
+
+.project-image {
+  max-width: 500px;
+  max-height: 500px;
+  float: left;
+  margin: 5px;
 }

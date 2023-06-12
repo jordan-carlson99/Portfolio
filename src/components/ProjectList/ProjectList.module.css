@@ -34,6 +34,7 @@
 
 .project-link {
   padding-bottom: 5px;
+  width: min-content;
 }
 
 .project-body {
@@ -53,6 +54,14 @@
   width: 100%;
 }
 
-.body-text {
-  width: 60%;
+.open {
+  max-height: 80vh;
+  overflow-y: visible;
+  transition: 0.4s;
+}
+
+.close {
+  max-height: 40px;
+  overflow-y: hidden;
+  transition: 0.4s;
 }

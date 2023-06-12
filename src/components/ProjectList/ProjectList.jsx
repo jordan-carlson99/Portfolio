@@ -41,20 +41,12 @@ export default function ProjectList({ projects }) {
               target="_blank"
             >{`Checkout ${project.title}`}</a>
             <div className={styles["project-body"]}>
-              <div className={styles["image-container"]}>
-                <img
-                  className={styles["project-image"]}
-                  alt={`image for ${project.title}`}
-                  src={project.imgLink}
-                ></img>
-              </div>
-              <div className={styles["body-text"]}>
-                <Highlighter
-                  bodyText={project.description}
-                  isHighlighted={isHighlighted}
-                  setIsHighlighted={setIsHighlighted}
-                />
-              </div>
+              <Highlighter
+                bodyText={project.description}
+                isHighlighted={isHighlighted}
+                setIsHighlighted={setIsHighlighted}
+                projectImage={project.imgLink}
+              />
             </div>
           </div>
         );

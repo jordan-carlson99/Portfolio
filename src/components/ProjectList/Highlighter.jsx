@@ -5,6 +5,7 @@ export default function Highlighter({
   bodyText,
   isHighlighted,
   setIsHighlighted,
+  projectImage,
 }) {
   const [keywords, setKeywords] = useState(["ut", "sic", "sit", "sed"]);
   let bodyArr = bodyText.split("\n");
@@ -22,7 +23,15 @@ export default function Highlighter({
   };
 
   return (
-    <div>
+    <div className={styles["main-body"]}>
+      <div className={styles["image-container"]}>
+        <img
+          className={styles["project-image"]}
+          alt={`image for ${projectImage}`}
+          src={projectImage}
+        ></img>
+      </div>
+
       {bodyArr.map((pararaph) => {
         let highlighted;
         keywords.forEach((keyWord, i) => {
