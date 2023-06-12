@@ -13,9 +13,16 @@ export default function ProjectList({ projects }) {
     <div id={styles["project-container"]}>
       {projects.map((project) => {
         return (
-          <details className={styles["project"]} onClick={handleOpen}>
-            <summary className={styles["project-title"]}>
-              <div className={styles["title-container"]}>{project.title}</div>
+          <div
+            className={
+              isHighlighted
+                ? `${styles["project"]} ${styles["open"]}`
+                : `${styles["project"]} ${styles["close"]}`
+            }
+            onClick={handleOpen}
+          >
+            <div className={styles["project-title"]}>
+              {project.title}
               <div className={styles["icon-container"]}>
                 {project.technologies.map((technology) => {
                   return (
@@ -27,7 +34,7 @@ export default function ProjectList({ projects }) {
                   );
                 })}
               </div>
-            </summary>
+            </div>
             <a
               className={styles["project-link"]}
               href={project.projectLink}
@@ -41,13 +48,15 @@ export default function ProjectList({ projects }) {
                   src={project.imgLink}
                 ></img>
               </div>
-              <Highlighter
-                bodyText={project.description}
-                isHighlighted={isHighlighted}
-                setIsHighlighted={setIsHighlighted}
-              />
+              <div className={styles["body-text"]}>
+                <Highlighter
+                  bodyText={project.description}
+                  isHighlighted={isHighlighted}
+                  setIsHighlighted={setIsHighlighted}
+                />
+              </div>
             </div>
-          </details>
+          </div>
         );
       })}
     </div>

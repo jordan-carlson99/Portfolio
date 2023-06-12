@@ -8,17 +8,15 @@
 }
 
 .project {
+  transition: 0.3s;
   border: 1px solid white;
   display: flex;
   align-content: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 10px;
-}
-
-.tech-icon {
-  height: 30px;
-  width: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
@@ -26,10 +24,12 @@
   align-items: center;
   justify-content: space-between;
   color: black;
+  margin: 10px;
 }
 
-.title-container {
-  padding: 10px;
+.tech-icon {
+  height: 30px;
+  width: 30px;
 }
 
 .project-link {
@@ -45,5 +45,14 @@
 }
 
 .image-container {
+  width: 40%;
+  height: min-content;
+}
+
+.project-image {
   width: 100%;
+}
+
+.body-text {
+  width: 60%;
 }
