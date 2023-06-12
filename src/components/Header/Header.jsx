@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Header.module.css";
 
 export default function Header() {
   const [isLoaded, setLoaded] = useState(false);
@@ -7,14 +8,17 @@ export default function Header() {
   });
   return (
     <header id="header">
-      <div id="loading-bar" className={isLoaded ? "loading" : ""}></div>
-      <div id="info">
-        <h1 id="name">Jordan Carlson</h1>
-        <div id="skills-section">
-          <p className="skills">
+      <div
+        id={styles["loading-bar"]}
+        className={isLoaded ? styles["loading"] : styles[""]}
+      ></div>
+      <div id={styles["info"]}>
+        <h1 id={styles["name"]}>Jordan Carlson</h1>
+        <div id={styles["skills-section"]}>
+          <p className={styles["skills"]}>
             Front end - JavaScript | React.js | HTML | CSS | Bootstrap
           </p>
-          <p className="skills">
+          <p className={styles["skills"]}>
             Back end - Node.js | Express | PostgreSQL | MongoDB | MySQL |RESTful
             APIs | MVCs
           </p>
