@@ -7,7 +7,13 @@ export default function Highlighter({
   setIsHighlighted,
   projectImage,
 }) {
-  const [keywords, setKeywords] = useState(["ut", "sic", "sit", "sed"]);
+  const [keywords, setKeywords] = useState([
+    "efficient",
+    "responsive",
+    "scalable",
+    "database",
+    "data-driven",
+  ]);
   let bodyArr = bodyText.split("\n");
 
   const highlight = (keyword, paragraph) => {

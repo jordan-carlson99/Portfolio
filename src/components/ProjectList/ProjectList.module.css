@@ -5,63 +5,7 @@
   align-content: center;
   width: 90%;
   margin: 25px;
-}
-
-.project {
-  transition: 0.3s;
-  border: 1px solid white;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: black;
-  margin: 10px;
-}
-
-.tech-icon {
-  height: 30px;
-  width: 30px;
-}
-
-.project-link {
-  padding-bottom: 5px;
-  width: min-content;
-}
-
-.project-body {
-  display: flex;
-}
-
-.description {
-  margin: 10px;
-}
-
-.image-container {
-  width: 40%;
-  height: min-content;
-}
-
-.project-image {
-  width: 100%;
-}
-
-.open {
-  max-height: 80vh;
-  overflow-y: visible;
-  transition: 0.4s;
-}
-
-.close {
-  max-height: 40px;
   overflow-y: hidden;
-  transition: 0.4s;
+  max-height: 70vh;
 }

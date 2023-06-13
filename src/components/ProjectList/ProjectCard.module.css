@@ -1,0 +1,74 @@
+.project {
+  transition: 0.3s;
+  border-bottom: 1px solid #93b0c0;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: large;
+  margin: 10px;
+}
+
+.project:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tech-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.project-link {
+  padding-bottom: 5px;
+  width: fit-content;
+  color: white;
+  margin: 15px;
+}
+
+.project-link:visited {
+  color: #93b0c0;
+}
+
+.project-body {
+  display: flex;
+}
+
+.description {
+  margin: 10px;
+}
+
+.image-container {
+  width: 40%;
+  height: min-content;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.open {
+  max-height: 70vhpx;
+  overflow-y: scroll;
+  transition: 0.4s;
+  border: none;
+}
+
+.open:hover {
+  background-color: #2d2d2d;
+}
+
+.close {
+  max-height: 45px;
+  overflow-y: hidden;
+  transition: 0.4s;
+}
