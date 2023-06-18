@@ -4,18 +4,22 @@ import ProjectList from "../ProjectList/ProjectList";
 
 export default function BioText({ text, projects }) {
   const [terminalShrink, setTerminalShrink] = useState(false);
+  const [totalDelay, setTotalDelay] = useState(
+    (1.5 * text.split("\n").length - 0.2) * 1000
+  );
+  const [timer, setTimer] = useState(null);
   // const [type, setType] = useState("bio-text");
   // const typing = () => {
   //   setType("bio-text typing");
   // };
 
   useEffect(() => {
-    // const totalDelay = (1.5 * text.split("\n").length - 0.2) * 1000;
-    const totalDelay = 1;
     console.log(totalDelay);
-    setTimeout(() => {
-      setTerminalShrink(true);
-    }, totalDelay);
+    setTimer(
+      setTimeout(() => {
+        setTerminalShrink(true);
+      }, totalDelay)
+    );
   }, []);
 
   let delay = -1.5;
@@ -68,6 +72,19 @@ export default function BioText({ text, projects }) {
         id={styles["terminal-text"]}
         className={terminalShrink ? styles["shrink"] : styles[""]}
       >
+        {!terminalShrink && (
+          <div id={styles["skip-box"]}>
+            <p
+              id={styles["skip-text"]}
+              onClick={() => {
+                clearTimeout(timer);
+                setTerminalShrink(true);
+              }}
+            >
+              skip
+            </p>
+          </div>
+        )}
         {paragraphs}
       </div>
       {terminalShrink && <ProjectList projects={projects} />}

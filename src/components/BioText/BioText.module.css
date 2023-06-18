@@ -48,6 +48,21 @@
   color: #ffff;
 }
 
+#skip-box {
+  position: absolute;
+  /* right: 10px; */
+  left: 85%;
+}
+
+#skip-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#skip-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @keyframes type-out {
   from {
     width: 0;
