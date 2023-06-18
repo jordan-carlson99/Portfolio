@@ -22,9 +22,11 @@ function App() {
       imgLink:
         "https://github.com/jordan-carlson99/nutrition/blob/main/images/idunn_orchard_screenshot.png?raw=true",
       title: "Idunn's Orchard",
-      description: `Idunn's Orchard is an full stack web application designed to help you with nutrition planning and meal management. Designed to achieve specific health goals, streamline grocery shopping, and discover new recipes.
+      description: `
+      I designed Idunn's Orchard as an full stack web application to help you with nutrition planning and meal management, Designed to achieve specific health goals and streamline grocery shopping.
+      Features: 
       Generate Grocery List: PSQL functions allow ingredient retrieval allowing simple grocery list generation.
-      Set and Track Goals: Utilize the power of chart.js to set, update, and monitor your nutrition goals, full CRUD operations.
+      Set and Track Goals: Utilize the power of chart.js to set, update, and monitor your nutrition goals, with full CRUD operations.
       Dynamic Recipe Management: Add recipes to meal plans and the macros adjust automatically based on the searchable ingredients used.
       Responsive User Interface: Idunn's Orchard boasts a sleek and responsive user interface, built using vanilla CSS.
       Frontend: vite + React - React is one of the most popular JavaScript libraries for building user interfaces. Its component-based architecture allows for modular development and efficient rendering. By utilizing React, Idunn's Orchard delivers a responsive and interactive frontend.
@@ -43,15 +45,42 @@ function App() {
         "psql",
         "node",
         "react",
+        "docker",
       ],
     },
     {
-      imgLink: "",
-      title: "testtst",
-      description: `hey`,
-      projectLink: "",
-      technologies: ["html", "css", "js"],
+      imgLink:
+        "https://github.com/FrontEndForceTeam/AdidasFEC/blob/main/client/public/readmeAssets/adidas_site_top.png?raw=true",
+      title: "Adidas Site Clone",
+      description: `In an agile team environment 3 other web developers and I created a 1 for 1 Adidas site clone using React, Postgres, Express, and Node from site selection to deployment
+      Features:
+      Pure CSS: To enable more refined control over the styling of the site we opted to avoid CSS libraries and create every component by hand to illustrate our understanding of the underlying concepts.
+      Product based page layout: In order to allow further expansion of the site we architected our database to rely on a product ID to fetch the loading assets for the page, this means a webscraper can simply capture assets and create more product pages.
+      Agile development: our team used agile methodologies to develop the product in a short time including the concepts of the SDLC, minimum viable products, sprint planning, daily stand-ups and sprint retrospectives. This let our team move quickly and create the site over the course of 5 days.
+      Continuous Integration / Continuous Development: I oversaw git integration within our project which allowed us to quickly set-up a CI/CD pipeline and implement tools such as pull request processes, project ticketing, and kanban board integration.
+      `,
+      projectLink: "https://github.com/FrontEndForceTeam/AdidasFEC",
+      technologies: ["css", "js", "vite", "psql", "node", "react", "docker"],
     },
+    {
+      imgLink:
+        "https://github.com/jordan-carlson99/CME-Mapping/raw/main/CME_project_example.png",
+      title: "Coronal Mass Ejection Event Mapping Tool",
+      description: `Coronal Mass Ejection Event Mapping is a web app that captures Coronal Mass Ejections (CMEs) using NASA's DONKI API. It provides an adjustable date range, a 3D rendering of the sun with translated solar coordinates indicating CME locations, and a CME catalog displaying structure class, solar coordinates, measured speed, and notes.
+      Features:
+      Adjustable start and end date: Users can select a specific date range to view Coronal Mass Ejections within that period.
+      3D rendering of the sun with translated solar coordinates: The app uses the P5 library to render a 3D representation of the sun and visually displays the solar coordinates where CME events occurred.
+      CME catalog: The app presents a catalog that provides detailed information about each CME event, including structure class, solar coordinates, measured speed, and relevant notes.`,
+      projectLink: "https://github.com/jordan-carlson99/CME-Mapping",
+      technologies: ["html", "css", "js", "p5", "node"],
+    },
+    // {
+    //   imgLink: "",
+    //   title: "",
+    //   description: ``,
+    //   projectLink: "",
+    //   technologies: ["html", "css", "js"],
+    // },
     // {
     //   imgLink: "",
     //   title: "",

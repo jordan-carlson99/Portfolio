@@ -10,8 +10,8 @@ export default function BioText({ text, projects }) {
   // };
 
   useEffect(() => {
-    // const totalDelay = (1.5 * text.split("\n").length - 0.2) * 1000;
-    const totalDelay = 1;
+    const totalDelay = (1.5 * text.split("\n").length - 0.2) * 1000;
+    // const totalDelay = 1;
     console.log(totalDelay);
     setTimeout(() => {
       setTerminalShrink(true);
