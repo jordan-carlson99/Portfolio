@@ -60,8 +60,8 @@ export default function ProjectCard({
         <Highlighter
           bodyText={project.description}
           isHighlighted={isHighlighted}
-          setIsHighlighted={setIsHighlighted}
           projectImage={project.imgLink}
+          keyWords={project.highlights}
         />
       </div>
     </div>

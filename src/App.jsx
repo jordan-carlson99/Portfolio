@@ -47,12 +47,21 @@ function App() {
         "react",
         "docker",
       ],
+      highlights: [
+        "efficient",
+        "data-driven",
+        "full CRUD operations.",
+        "sleek and responsive",
+        "interactive",
+        "efficiency",
+        "data management, scalability, and reliability",
+      ],
     },
     {
       imgLink:
         "https://github.com/FrontEndForceTeam/AdidasFEC/blob/main/client/public/readmeAssets/adidas_site_top.png?raw=true",
       title: "Adidas Site Clone",
-      description: `In an agile team environment 3 other web developers and I created a 1 for 1 Adidas site clone using React, Postgres, Express, and Node from site selection to deployment
+      description: `In an agile team environment three other web developers and I created a one-for-one Adidas site clone using React, Postgres, Express, and Node from site selection to deployment
       Features:
       Pure CSS: To enable more refined control over the styling of the site we opted to avoid CSS libraries and create every component by hand to illustrate our understanding of the underlying concepts.
       Product based page layout: In order to allow further expansion of the site we architected our database to rely on a product ID to fetch the loading assets for the page, this means a webscraper can simply capture assets and create more product pages.
@@ -61,6 +70,14 @@ function App() {
       `,
       projectLink: "https://github.com/FrontEndForceTeam/AdidasFEC",
       technologies: ["css", "js", "vite", "psql", "node", "react", "docker"],
+      highlights: [
+        "agile",
+        "refined control",
+        "SDLC",
+        "CI/CD pipeline",
+        "kanban",
+        "ticketing",
+      ],
     },
     {
       imgLink:
@@ -73,6 +90,7 @@ function App() {
       CME catalog: The app presents a catalog that provides detailed information about each CME event, including structure class, solar coordinates, measured speed, and relevant notes.`,
       projectLink: "https://github.com/jordan-carlson99/CME-Mapping",
       technologies: ["html", "css", "js", "p5", "node"],
+      highlights: ["API", "3D rendering", "translated solar coordinates"],
     },
     // {
     //   imgLink: "",

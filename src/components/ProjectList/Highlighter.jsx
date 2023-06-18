@@ -1,19 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./Highlighter.module.css";
 
 export default function Highlighter({
   bodyText,
   isHighlighted,
-  setIsHighlighted,
   projectImage,
+  keyWords,
 }) {
-  const [keywords, setKeywords] = useState([
-    "efficient",
-    "responsive",
-    "scalable",
-    "database",
-    "data-driven",
-  ]);
+  console.log(keyWords);
+  const [keywords, setKeywords] = useState(keyWords);
   let bodyArr = bodyText.split("\n");
 
   const highlight = (keyword, paragraph) => {
