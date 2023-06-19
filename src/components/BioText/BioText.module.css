@@ -21,11 +21,6 @@
   border-radius: 20px;
   overflow-y: hidden;
 }
-@media screen and (min-height: 700px) {
-  #terminal-text {
-    height: 80%;
-  }
-}
 
 #terminal-text.shrink {
   transition: 0.3s;
@@ -61,6 +56,19 @@
 #skip-text:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media screen and (min-width: 300px) {
+  #terminal-text {
+    height: 80%;
+  }
+  #terminal-text.shrink {
+    visibility: hidden;
+    width: 0;
+  }
+  #skip-box {
+    left: 80%;
+  }
 }
 
 @keyframes type-out {

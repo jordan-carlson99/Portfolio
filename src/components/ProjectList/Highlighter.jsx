@@ -51,15 +51,13 @@ export default function Highlighter({
               {test.map((fragment, i) => {
                 if (i % 2 != 0) {
                   return (
-                    <>
-                      <mark
-                        className={
-                          isHighlighted ? styles["highlighted"] : styles[""]
-                        }
-                      >
-                        {fragment}
-                      </mark>
-                    </>
+                    <mark
+                      className={
+                        isHighlighted ? styles["highlighted"] : styles[""]
+                      }
+                    >
+                      {fragment}
+                    </mark>
                   );
                 } else {
                   return <>{fragment}</>;

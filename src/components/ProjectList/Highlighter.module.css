@@ -36,3 +36,28 @@ mark.highlighted {
   float: left;
   margin: 5px;
 }
+
+@media screen and (min-width: 300px) {
+  .main-body {
+    margin: 0;
+  }
+  .description {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 300px;
+  }
+  .image-container {
+    float: none;
+  }
+  .project-image {
+    margin: 0;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .image-container {
+    margin: 0;
+  }
+  mark.highlighted {
+    text-shadow: none;
+  }
+}
