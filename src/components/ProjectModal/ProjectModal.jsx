@@ -34,7 +34,7 @@ export default function ProjectModal({ link }) {
               ? `${styles["pop-ups"]} ${styles["hidden"]}`
               : `${styles["pop-ups"]} ${styles["move"]}`
           }
-          src="../icons/resume.png"
+          src="./resume.png"
         ></img>
       </a>
       <a
@@ -47,7 +47,7 @@ export default function ProjectModal({ link }) {
         href={link[1]}
         target="_blank"
       >
-        <img className={styles["icon"]} src="../icons/email.png"></img>
+        <img className={styles["icon"]} src="./email.png"></img>
       </a>
       <a
         className={
@@ -59,7 +59,7 @@ export default function ProjectModal({ link }) {
         href={link[2]}
         target="_blank"
       >
-        <img className={styles["icon"]} src="../icons/linkedin.png"></img>
+        <img className={styles["icon"]} src="./linkedin.png"></img>
       </a>
       <a
         className={
@@ -71,7 +71,7 @@ export default function ProjectModal({ link }) {
         href={link[3]}
         target="_blank"
       >
-        <img className={styles["icon"]} src="../icons/github.png"></img>
+        <img className={styles["icon"]} src="./github.png"></img>
       </a>
       <button id={styles["project-modal"]} onClick={showIcons}>
         Contact Me
