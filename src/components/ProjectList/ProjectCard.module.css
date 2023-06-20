@@ -73,12 +73,13 @@
   /* transition: 0.4s; */
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 450px) {
   .project {
-    width: 100%;
+    /* width: 100%; */
+    max-width: 200px;
     overflow-x: hidden;
   }
   .close {
-    max-height: 90px;
+    max-height: 100px;
   }
 }

@@ -37,14 +37,14 @@ mark.highlighted {
   margin: 5px;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 450px) {
   .main-body {
     margin: 0;
   }
   .description {
     word-wrap: break-word;
     white-space: normal;
-    max-width: 300px;
+    max-width: 200px;
   }
   .image-container {
     float: none;
