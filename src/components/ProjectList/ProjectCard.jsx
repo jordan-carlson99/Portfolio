@@ -44,7 +44,7 @@ export default function ProjectCard({
             return (
               <img
                 alt={`${technology} icon`}
-                src={`../../../icons/${technology}.png`}
+                src={`src/assets/icons/${technology}.png`} // src/assets/icons
                 className={styles["tech-icon"]}
               ></img>
             );
