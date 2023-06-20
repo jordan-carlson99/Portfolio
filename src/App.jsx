@@ -114,7 +114,7 @@ function App() {
       <BioText text={bio} projects={projects}></BioText>
       <ProjectModal
         link={[
-          "none",
+          "resume.pdf",
           "none",
           "https://www.linkedin.com/in/jordan-carlson99/",
           "https://github.com/jordan-carlson99",

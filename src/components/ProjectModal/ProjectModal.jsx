@@ -44,7 +44,7 @@ export default function ProjectModal({ link }) {
             : `${styles["pop-ups"]} ${styles["move"]}`
         }
         id={styles["pop-up-contact"]}
-        href={link[1]}
+        href="mailto: jordan.carlson.square@gmail.com"
         target="_blank"
       >
         <img className={styles["icon"]} src="./email.png"></img>

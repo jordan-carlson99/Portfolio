@@ -16,10 +16,10 @@ export default function Header() {
         <h1 id={styles["name"]}>Jordan Carlson</h1>
         <div id={styles["skills-section"]}>
           <p className={styles["skills"]}>
-            Front end - JavaScript | React.js | HTML | CSS | Bootstrap
+            Front end - JavaScript | React | HTML | CSS | Bootstrap |
           </p>
           <p className={styles["skills"]}>
-            Back end - Node.js | Express | PostgreSQL | MongoDB | MySQL |RESTful
+            Back end - Node.js | Express | PostgreSQL | Docker | MySQL |RESTful
             APIs | MVCs
           </p>
         </div>
