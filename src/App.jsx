@@ -10,13 +10,16 @@ import ProjectModal from "./components/ProjectModal/ProjectModal";
 // github: https://github.com/jordan-carlson99
 
 function App() {
-  const bio = `cat ./bio.txt
+  const bio = `
   hi my name is Jordan
+
   im a full stack web developer with experience in React, CSS, HTML, Node, Express, and PSQL to name a few
+
   i have experience as a network adminstrator and technical project manager in the military.
+
   i am currently a full time student at a coding bootcamp for fullstack web development
-  here's some of my work
-  sudo ./projects.sh`;
+  
+  welcome to my site!`;
   const projects = [
     {
       imgLink:
