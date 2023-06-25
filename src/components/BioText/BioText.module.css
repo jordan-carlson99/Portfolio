@@ -72,6 +72,19 @@
   }
 }
 
+.console-btn {
+  color: rgb(190, 190, 190);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.console-btn:hover {
+  color: white;
+  background-color: rgba(197, 197, 197, 0.4);
+}
+
 @media screen and (max-width: 450px) {
   #terminal-text {
     height: 80%;
