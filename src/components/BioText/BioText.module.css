@@ -79,12 +79,13 @@
   justify-content: space-around;
   max-width: 350px;
   margin-top: 10px;
+  animation: slow-reveal 1.5s;
 }
 
 .console-btn {
   color: rgb(190, 190, 190);
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid #93b0c0;
   border-radius: 10px;
   padding: 8px;
 }
@@ -101,14 +102,12 @@
     padding-bottom: 50px;
   }
   #terminal-text.shrink {
-    /* visibility: hidden; */
     width: 93dvw;
     height: 15vh;
     overflow-y: hidden;
     overflow-x: hidden;
     position: absolute;
     top: 0px;
-    /* right: 25vw; */
   }
   #skip-box {
     left: 80%;
@@ -126,5 +125,14 @@
   to {
     width: 90%;
     height: auto;
+  }
+}
+
+@keyframes slow-reveal {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
   }
 }

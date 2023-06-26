@@ -12,7 +12,7 @@ mark {
 mark.highlighted {
   transition: 2.2s;
   background-color: #93b0c0;
-  border-radius: 15%;
+  border-radius: 7px;
   color: black;
   font-weight: 900;
   text-shadow: 0 0 7px #93b0c0, 0 0 10px #93b0c0, 0 0 21px #93b0c0,
