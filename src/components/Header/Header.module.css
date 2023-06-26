@@ -16,12 +16,12 @@ header {
   width: 0vw;
   background-color: #93b0c0;
   height: 5px;
-  transition: width 14.5s;
+  transition: width 3s;
   transition-timing-function: linear;
 }
 
 #loading-bar.loading {
-  width: 105vw;
+  width: 100dvw;
 }
 
 #info {

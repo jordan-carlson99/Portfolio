@@ -102,16 +102,19 @@
   }
   #terminal-text.shrink {
     /* visibility: hidden; */
-    width: 90%;
-    height: 50px;
+    width: 93dvw;
+    height: 15vh;
     overflow-y: hidden;
     overflow-x: hidden;
     position: absolute;
-    top: 100px;
+    top: 0px;
     /* right: 25vw; */
   }
   #skip-box {
     left: 80%;
+  }
+  #console-btn-container {
+    max-width: 100vw;
   }
 }
 

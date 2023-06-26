@@ -75,11 +75,10 @@
 
 @media screen and (max-width: 450px) {
   .project {
-    /* width: 100%; */
-    max-width: 200px;
+    max-width: 90dvw;
     overflow-x: hidden;
   }
   .close {
-    max-height: 100px;
+    max-height: 90px;
   }
 }

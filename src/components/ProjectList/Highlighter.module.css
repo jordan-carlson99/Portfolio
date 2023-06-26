@@ -44,15 +44,16 @@ mark.highlighted {
   .description {
     word-wrap: break-word;
     white-space: normal;
-    max-width: 200px;
+    max-width: 80dvw;
   }
   .image-container {
     float: none;
+    width: 80dvw;
   }
   .project-image {
-    margin: 0;
-    max-width: 250px;
-    max-height: 250px;
+    margin: 0 0 20px 0;
+    max-width: 80dvw;
+    max-height: 300px;
   }
   .image-container {
     margin: 0;

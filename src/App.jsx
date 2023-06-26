@@ -11,15 +11,17 @@ import ProjectModal from "./components/ProjectModal/ProjectModal";
 
 function App() {
   const bio = `
-  hi my name is Jordan
+  Hi, my name is Jordan.
 
-  im a full stack web developer with experience in React, CSS, HTML, Node, Express, and PSQL to name a few
+  Im a passionate full stack developer with experience in React, CSS, HTML, Node, Express, and PSQL and more.
 
-  i have experience as a network adminstrator and technical project manager in the military.
+  I have a lot of experience working on large full stack web applications in agile team environments.
 
-  i am currently a full time student at a coding bootcamp for fullstack web development
+  I have experience as a network adminstrator and technical project manager in the military.
+
+  I have a unique balance of understanding the role tech plays in achieving organizational goals and the technical requirements to accomplish them.
   
-  welcome to my site!
+  Welcome to my site!
   
   `;
   const projects = [
@@ -30,7 +32,7 @@ function App() {
       description: `
       I designed Idunn's Orchard as an full stack web application to help you with nutrition planning and meal management, Designed to achieve specific health goals and streamline grocery shopping.
       Features: 
-      Generate Grocery List: PSQL functions allow ingredient retrieval allowing simple grocery list generation.
+      Generating Grocery List: PSQL functions allow ingredient retrieval allowing simple grocery list generation.
       Set and Track Goals: Utilize the power of chart.js to set, update, and monitor your nutrition goals, with full CRUD operations.
       Dynamic Recipe Management: Add recipes to meal plans and the macros adjust automatically based on the searchable ingredients used.
       Responsive User Interface: Idunn's Orchard boasts a sleek and responsive user interface, built using vanilla CSS.
@@ -113,8 +115,7 @@ function App() {
     // }
   ];
   const approach = `
-  My coding philosophy revolves around the notion that clear and concise code empowers efficient collaboration and facilitates the transmission of valuable insights, 
-  through prioritizing readability and maintainability
+  My coding philosophy revolves around the notion that clear and concise code empowers efficient collaboration and facilitates the transmission of valuable insights, through prioritizing readability and maintainability.
 
   Simplicity and modularity, enables me to create code that is both elegant and functional. 
   I firmly believe that if a line of code becomes excessively convoluted or condensed, it loses its purpose and effectiveness.
@@ -141,8 +142,7 @@ function App() {
 
   There were many systems that I managed which helped me become the developer I am today including RHEL servers, Windows servers, RAID5 systems, and many, many embedded components.
 
-  Leveraging my exposure to these systems I had the opportunity to work with, I chose to spend the last 5 months of my contract in an
-  immersive software developer course with Galvanize. 
+  Leveraging my exposure to these systems I had the opportunity to work with, I chose to spend the last 5 months of my contract in an immersive software developer course with Galvanize. 
 
   Here I learned more about Javascript, HTML, CSS, and an array of web technologies, which led me to my passion of programming.
 
