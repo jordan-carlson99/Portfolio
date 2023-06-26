@@ -19,7 +19,9 @@ function App() {
 
   i am currently a full time student at a coding bootcamp for fullstack web development
   
-  welcome to my site!`;
+  welcome to my site!
+  
+  `;
   const projects = [
     {
       imgLink:
@@ -110,11 +112,53 @@ function App() {
     //   technologies: ["html", "css", "js"],
     // }
   ];
+  const approach = `
+  My coding philosophy revolves around the notion that clear and concise code empowers efficient collaboration and facilitates the transmission of valuable insights, 
+  through prioritizing readability and maintainability
+
+  Simplicity and modularity, enables me to create code that is both elegant and functional. 
+  I firmly believe that if a line of code becomes excessively convoluted or condensed, it loses its purpose and effectiveness.
+  
+  In my work, I prioritize maintainability and comprehensibility. 
+  I view programs as collective storytelling endeavors, where every line of code contributes to the overall narrative. 
+  Just as a poorly written story can leave readers puzzled or disinterested, code that is difficult to read or decipher fails to convey its intended message.
+  
+  By crafting code that is easily understandable to both present and future collaborators, I ensure that the story behind the program remains accessible.
+  This approach not only enhances the efficiency of development and debugging processes but also enables others to grasp the underlying logic and purpose of the code.
+  
+  I strive to ensure that the moral of the code's story is never missed.
+
+  `;
+
+  const aboutMe = `
+  Hi, my name is Jordan.
+  
+  I grew up in Minnesota before joining the Army in 2016 and leaving to basic in 2017.
+  
+  My time in the army was spent repairing Unmanned Systems and managing my organization's maintenance section. 
+
+  During my time I learned a lot about project management and the role technology plays in enabling success.
+
+  There were many systems that I managed which helped me become the developer I am today including RHEL servers, Windows servers, RAID5 systems, and many, many embedded components.
+
+  Leveraging my exposure to these systems I had the opportunity to work with, I chose to spend the last 5 months of my contract in an
+  immersive software developer course with Galvanize. 
+
+  Here I learned more about Javascript, HTML, CSS, and an array of web technologies, which led me to my passion of programming.
+
+  I am constantly pulled into building new projects and collaborating with others on theirs. 
+
+  `;
   return (
     <>
       <Header></Header>
       <div id="aligner"></div>
-      <BioText text={bio} projects={projects}></BioText>
+      <BioText
+        initialText={bio}
+        projects={projects}
+        approach={approach}
+        aboutMe={aboutMe}
+      ></BioText>
       <ProjectModal
         link={[
           "resume.pdf",

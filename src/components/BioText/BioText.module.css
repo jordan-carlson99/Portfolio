@@ -13,6 +13,7 @@
 #terminal-text {
   display: list-item;
   z-index: 2;
+  padding: 15px;
   /* flex-direction: column; */
   /* background-color: #404040; */
   background-image: url("./butterfly_nebula.jpg");
@@ -83,6 +84,7 @@
 .console-btn:hover {
   color: white;
   background-color: rgba(197, 197, 197, 0.4);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 450px) {
