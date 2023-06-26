@@ -47,6 +47,11 @@ export default function BioText({ initialText, projects, approach, aboutMe }) {
       <div
         id={styles["terminal-text"]}
         className={terminalShrink ? styles["shrink"] : styles[""]}
+        onClick={() => {
+          if (ifProjects && window.matchMedia("(max-width: 450px)").matches) {
+            setTerminalShrink(!terminalShrink);
+          }
+        }}
       >
         {/* {!terminalShrink && (
           <div id={styles["skip-box"]}>
