@@ -59,7 +59,7 @@
 .open {
   max-height: 70vhpx;
   overflow-y: scroll;
-  transition: 0.4s;
+  /* transition: 0.4s; */
   border: none;
 }
 
@@ -70,5 +70,15 @@
 .close {
   max-height: 45px;
   overflow-y: hidden;
-  transition: 0.4s;
+  /* transition: 0.4s; */
+}
+
+@media screen and (max-width: 450px) {
+  .project {
+    max-width: 90dvw;
+    overflow-x: hidden;
+  }
+  .close {
+    max-height: 90px;
+  }
 }

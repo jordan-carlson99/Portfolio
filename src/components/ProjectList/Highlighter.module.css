@@ -12,7 +12,7 @@ mark {
 mark.highlighted {
   transition: 2.2s;
   background-color: #93b0c0;
-  border-radius: 15%;
+  border-radius: 7px;
   color: black;
   font-weight: 900;
   text-shadow: 0 0 7px #93b0c0, 0 0 10px #93b0c0, 0 0 21px #93b0c0,
@@ -35,4 +35,30 @@ mark.highlighted {
   max-height: 500px;
   float: left;
   margin: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .main-body {
+    margin: 0;
+  }
+  .description {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 80dvw;
+  }
+  .image-container {
+    float: none;
+    width: 80dvw;
+  }
+  .project-image {
+    margin: 0 0 20px 0;
+    max-width: 80dvw;
+    max-height: 300px;
+  }
+  .image-container {
+    margin: 0;
+  }
+  mark.highlighted {
+    text-shadow: none;
+  }
 }

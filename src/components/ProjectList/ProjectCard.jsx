@@ -6,13 +6,26 @@ export default function ProjectCard({
   project,
   isHighlighted,
   setIsHighlighted,
+  setCardOpen,
+  cardOpen,
 }) {
   const [open, setOpen] = useState(false);
   const cardRef = useRef(null);
   const handleOpen = () => {
-    setOpen(!open);
-    setIsHighlighted(!isHighlighted);
-    cardRef.current.scrollTop = 0;
+    // if any card is open, dont open it
+    if (!cardOpen) {
+      setOpen(true);
+      setIsHighlighted(!isHighlighted);
+      cardRef.current.scrollTop = 0;
+      setCardOpen(true);
+    } else if (open) {
+      setOpen(false);
+      setIsHighlighted(!isHighlighted);
+      cardRef.current.scrollTop = 0;
+      setCardOpen(false);
+    } else {
+      console.log("card is already open");
+    }
   };
   return (
     <div
@@ -31,7 +44,7 @@ export default function ProjectCard({
             return (
               <img
                 alt={`${technology} icon`}
-                src={`../../../icons/${technology}.png`}
+                src={`./${technology}.png`} // src/assets/icons
                 className={styles["tech-icon"]}
               ></img>
             );
@@ -47,8 +60,8 @@ export default function ProjectCard({
         <Highlighter
           bodyText={project.description}
           isHighlighted={isHighlighted}
-          setIsHighlighted={setIsHighlighted}
           projectImage={project.imgLink}
+          keyWords={project.highlights}
         />
       </div>
     </div>
